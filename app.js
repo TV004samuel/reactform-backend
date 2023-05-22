@@ -10,6 +10,6 @@ app.use(cors({
     origin:"*"
 }));
 
-app.listen(process.env.SERVERPORT || 3000, () => {
+app.listen(process.env.SERVERPORT|| 3000, () => {
   console.log("Server running in ", process.env.SERVERPORT);
 });
