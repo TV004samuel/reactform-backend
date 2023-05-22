@@ -6,7 +6,7 @@ const controller = {
         res.json({
           message: "There was an error with the upstream service!",
         }),
-      duration
+      5000
     );
     try {
       clearTimeout(id);
@@ -30,7 +30,7 @@ const controller = {
       res.status(500).json({ message: err, status: false });
     }
   },
-  
+
 };
 
 module.exports = controller;
