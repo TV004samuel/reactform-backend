@@ -21,10 +21,6 @@ const controller = {
       res.status(500).json({ message: err, status: false });
     }
   },
-  async deno(req,res){
-    res.status(200).json({message:"hi server working"})
-  }
-
 };
 
 module.exports = controller;
