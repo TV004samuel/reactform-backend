@@ -11,7 +11,6 @@ const controller = {
     try {
       clearTimeout(id);
       const { name, email, mobile } = req.body;
-
       createPool.query(
         `INSERT INTO users (name, email, mobile) VALUES ($1, $2, $3) RETURNING *`,
         [name, email, mobile],
