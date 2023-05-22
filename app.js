@@ -5,6 +5,7 @@ require("dotenv").config();
 
 app.use(express.json());
 app.use("/user", router);
+app.use("/demo",router)
 
 app.listen(process.env.SERVERPORT || 3000, () => {
   console.log("Server running in ",process.env.SERVERPORT);

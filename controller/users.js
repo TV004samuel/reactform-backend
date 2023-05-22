@@ -1,15 +1,7 @@
 const createPool = require("../database");
 const controller = {
   async createUser(req, res) {
-    const id = setTimeout(
-      () =>
-        res.json({
-          message: "There was an error with the upstream service!",
-        }),
-      5000
-    );
     try {
-      clearTimeout(id);
       const { name, email, mobile } = req.body;
       createPool.query(
         `INSERT INTO users (name, email, mobile) VALUES ($1, $2, $3) RETURNING *`,
@@ -29,6 +21,9 @@ const controller = {
       res.status(500).json({ message: err, status: false });
     }
   },
+  async deno(req,res){
+    res.status(200).json({message:"hi server working"})
+  }
 
 };
 
