@@ -16,7 +16,7 @@ const controller = {
         //   }
         // }
       );
-      console.log(data.rows)
+      console.log(data)
       res.status(200).json({ message: data.rows, status: true });
     } catch (error) {
       console.log(error);
