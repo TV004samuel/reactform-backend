@@ -20,7 +20,7 @@ const controller = {
       res.status(200).json({ message: data.rows, status: true });
     } catch (error) {
       console.log(error);
-      res.status(500).json({ message: err, status: false });
+      res.status(500).json({ message: error, status: false });
     }
   },
 };
